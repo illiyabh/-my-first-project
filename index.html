@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  وب‌سایت میالویی — واردات تخصصی خودرو از دبی
+  ----------------------------------------------------------------------------
+  راهنمای ویرایش سریع برای افراد غیر برنامه‌نویس:
+  • تمام متن‌ها داخل همین فایل (index.html) هستند و با کامنت مشخص شده‌اند.
+  • برای تغییر متن، فقط متن بین تگ‌ها را عوض کنید؛ به کدها دست نزنید.
+  • رنگ‌ها و فونت‌ها در فایل css/styles.css و در بخش :root قابل تغییرند.
+  • اعداد به فارسی (۰۱۲۳۴۵۶۷۸۹) نوشته شده‌اند.
+  ============================================================================
+-->
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>میالویی | واردات تخصصی خودرو از دبی</title>
+
+  <!-- توضیح سایت برای موتورهای جستجو -->
+  <meta name="description" content="میالویی؛ واردات تخصصی خودرو از دبی همراه با مشاوره خرید، قرارداد رسمی، قیمت شفاف و ترخیص کامل گمرکی تا تحویل خودرو.">
+  <meta name="theme-color" content="#0d0f14">
+
+  <!-- آیکون سایت (کوچک، داخل خود فایل) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d0f14'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='%23c0c0c0' font-family='sans-serif'>M</text></svg>">
+
+  <!-- فونت‌ها: Vazirmatn برای متن، Lalezar برای تیترها -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================
+       ۱) هدر ثابت — لوگو در راست، منو در وسط، دکمه مشاوره در چپ
+       ========================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+
+      <!-- لوگو -->
+      <a href="#home" class="logo">میالویی.</a>
+
+      <!-- منوی اصلی -->
+      <nav class="nav" id="nav" aria-label="منوی اصلی">
+        <a href="#home">خانه</a>
+        <a href="#services">خدمات</a>
+        <a href="#process">فرآیند کار</a>
+        <a href="#about">درباره ما</a>
+        <a href="#contact">تماس با ما</a>
+      </nav>
+
+      <!-- دکمه فراخوانی فرم مشاوره -->
+      <div class="site-header__cta">
+        <button class="btn btn--silver btn--sm" data-open-form type="button">درخواست مشاوره</button>
+      </div>
+
+      <!-- دکمه منو در موبایل -->
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="باز و بسته کردن منو" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==========================================================
+         ۲) بخش هیرو — ویدیوی تمام‌صفحه که با اسکرول جلو/عقب می‌رود
+         ارتفاع این بخش ۲۵۰٪ ارتفاع صفحه است و تصویر آن «چسبان» می‌ماند.
+         ========================================================== -->
+    <section class="hero" id="home">
+      <div class="hero__sticky">
+
+        <!-- ویدیو — بدون هیچ لایه تاریک روی آن -->
+        <video class="hero__video" id="heroVideo"
+               src="assets/hero.mp4"
+               muted playsinline preload="auto" webkit-playsinline
+               disablepictureinpicture aria-hidden="true"></video>
+
+        <div class="hero__content">
+          <div class="container">
+            <!-- کارت شیشه‌ای متن هیرو -->
+            <div class="glass-card">
+              <span class="badge"><i class="badge__dot"></i>واردات تخصصی خودرو از دبی</span>
+
+              <!-- تیتر اصلی سایت -->
+              <h1 class="hero__title">خودروی رویایی‌تان را از دبی، مطمئن و شفاف وارد کنید</h1>
+
+              <!-- توضیح کوتاه -->
+              <p class="hero__text">
+                از انتخاب و خرید خودرو در دبی تا حمل، ترخیص گمرکی و تحویل در ایران؛
+                همه‌چیز با قرارداد رسمی، قیمت شفاف و گزارش مرحله‌ای.
+              </p>
+
+              <div class="hero__actions">
+                <button class="btn btn--silver" data-open-form type="button">ثبت درخواست مشاوره رایگان</button>
+                <a class="btn btn--outline" href="#process">مراحل کار ما</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-hint" aria-hidden="true">
+          <span>اسکرول کنید</span>
+          <i></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         ۳) نوار آمار و اعتماد — ۴ عدد بزرگ نقره‌ای
+         ========================================================== -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat reveal">
+            <div class="stat__value text-silver">+۱۰۰</div>
+            <div class="stat__label">خودرو وارداتی موفق</div>
+          </div>
+          <div class="stat reveal">
+            <div class="stat__value text-silver">۱۰۰٪</div>
+            <div class="stat__label">قرارداد رسمی و شفاف</div>
+          </div>
+          <div class="stat reveal">
+            <div class="stat__value stat__value--word text-silver">امارات</div>
+            <div class="stat__label">کشور مبدأ تأمین</div>
+          </div>
+          <div class="stat reveal">
+            <div class="stat__value stat__value--word text-silver">تا تحویل</div>
+            <div class="stat__label">پشتیبانی در تمام مراحل</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         ۴) خدمات — سه کارت با انیمیشن هاور
+         ========================================================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">خدمات میالویی</span>
+          <h2 class="section__title">هر آنچه برای واردات خودرو لازم دارید</h2>
+          <p class="section__subtitle">از مشاوره اولیه تا تحویل خودرو، تمام مراحل را با تیم متخصص ما پیش می‌برید.</p>
+        </div>
+
+        <div class="services__grid">
+          <!-- کارت ۱: واردات سفارشی خودرو -->
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+                <circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/>
+              </svg>
+            </div>
+            <h3>واردات سفارشی خودرو</h3>
+            <p>خودروی مورد نظرتان را مطابق سلیقه و بودجه‌تان انتخاب و وارد می‌کنیم؛ با محاسبه شفاف تمام هزینه‌ها تا لحظه تحویل.</p>
+          </article>
+
+          <!-- کارت ۲: مشاوره تخصصی خرید -->
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="8" height="4" x="8" y="2" rx="1"/>
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                <path d="m9 14 2 2 4-4"/>
+              </svg>
+            </div>
+            <h3>مشاوره تخصصی خرید</h3>
+            <p>تحلیل بازار، بررسی قوانین و مقررات واردات و محاسبه دقیق قیمت نهایی؛ پیش از آنکه تصمیم نهایی را بگیرید.</p>
+          </article>
+
+          <!-- کارت ۳: ترخیص و امور گمرکی -->
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            <h3>ترخیص و امور گمرکی</h3>
+            <p>انجام کامل مراحل ترخیص و تشریفات گمرکی، حتی برای خودروهایی که خودتان وارد کرده‌اید.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         ۵) فرآیند کار — ۵ گام شماره‌دار در یک خط زمانی
+         ========================================================== -->
+    <section class="section section--alt" id="process">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">مسیر واردات</span>
+          <h2 class="section__title">فرآیند کار</h2>
+          <p class="section__subtitle">پنج گام شفاف، از اولین تماس تا تحویل خودرو در پارکینگ خانه شما.</p>
+        </div>
+
+        <div class="process__timeline">
+          <div class="step reveal">
+            <span class="step__num">۱</span>
+            <span class="step__label">مشاوره و درخواست</span>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">۲</span>
+            <span class="step__label">انتخاب خودرو</span>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">۳</span>
+            <span class="step__label">خرید و حمل</span>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">۴</span>
+            <span class="step__label">ترخیص گمرکی</span>
+          </div>
+          <div class="step reveal">
+            <span class="step__num">۵</span>
+            <span class="step__label">تحویل</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         ۶) چرا میالویی؟ — دو ستون: چهار مزیت + پنل تصویر
+         ========================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="why__grid">
+
+          <div class="why__content">
+            <div class="section__head section__head--start reveal">
+              <span class="section__eyebrow">درباره ما</span>
+              <h2 class="section__title">چرا میالویی؟</h2>
+              <p class="section__subtitle">ما فقط خودرو وارد نمی‌کنیم؛ مسیر واردات را برای شما ساده، امن و شفاف می‌کنیم.</p>
+            </div>
+
+            <ul class="checklist">
+              <li class="reveal">
+                <span class="checklist__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+                <div>
+                  <strong>قرارداد رسمی</strong>
+                  <span>تمام مراحل با قرارداد رسمی و تعهد کتبی انجام می‌شود.</span>
+                </div>
+              </li>
+              <li class="reveal">
+                <span class="checklist__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+                <div>
+                  <strong>قیمت شفاف</strong>
+                  <span>هزینه‌ها از ابتدا مشخص و بدون هزینه پنهان محاسبه می‌شوند.</span>
+                </div>
+              </li>
+              <li class="reveal">
+                <span class="checklist__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+                <div>
+                  <strong>گزارش مرحله‌ای</strong>
+                  <span>در هر مرحله از خرید و حمل، گزارش دقیق دریافت می‌کنید.</span>
+                </div>
+              </li>
+              <li class="reveal">
+                <span class="checklist__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </span>
+                <div>
+                  <strong>تیم متخصص</strong>
+                  <span>تیمی آشنا به بازار دبی و قوانین گمرکی ایران، کنار شماست.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- پنل تصویر (جایگزین) — می‌توانید بعداً با تصویر واقعی جایگزین کنید -->
+          <div class="why__panel reveal" role="img" aria-label="تصویر جایگزین از خودروی وارداتی">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+              <circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/>
+            </svg>
+            <span class="why__panel-label">تصویر جایگزین</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         ۷) بخش فراخوان (CTA) — دعوت به ثبت درخواست مشاوره
+         ========================================================== -->
+    <section class="section cta" id="contact">
+      <div class="container">
+        <div class="cta__box reveal">
+          <h2 class="cta__title">آماده‌اید خودروی بعدی‌تان را وارد کنید؟</h2>
+          <p class="cta__text">فرم مشاوره را پر کنید؛ کارشناسان ما در اولین فرصت با شما تماس می‌گیرند و مسیر واردات را قدم‌به‌قدم توضیح می‌دهند.</p>
+          <button class="btn btn--silver btn--lg" data-open-form type="button">ثبت درخواست مشاوره</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================
+       ۸) فوتر
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- معرفی شرکت -->
+        <div class="footer__col">
+          <a href="#home" class="logo">میالویی.</a>
+          <p class="footer__text">
+            میالویی؛ واردات تخصصی خودرو از دبی همراه با قرارداد رسمی، قیمت شفاف،
+            مشاوره تخصصی خرید و ترخیص کامل گمرکی تا تحویل خودرو.
+          </p>
+        </div>
+
+        <!-- دسترسی سریع -->
+        <div class="footer__col">
+          <h3>دسترسی سریع</h3>
+          <ul class="footer__links">
+            <li><a href="#home">خانه</a></li>
+            <li><a href="#services">خدمات</a></li>
+            <li><a href="#process">فرآیند کار</a></li>
+            <li><a href="#about">درباره ما</a></li>
+            <li><a href="#contact">تماس با ما</a></li>
+          </ul>
+        </div>
+
+        <!-- اطلاعات تماس — شماره‌ها را با مقادیر واقعی جایگزین کنید -->
+        <div class="footer__col">
+          <h3>راه‌های تماس</h3>
+          <ul class="footer__links footer__links--contact">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+              <a href="tel:+989123456789" dir="ltr">۰۹۱۲۳۴۵۶۷۸۹</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg>
+              <a href="https://wa.me/989123456789" target="_blank" rel="noopener">واتس‌اپ</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <a href="mailto:info@mialoei.com" dir="ltr">info@mialoei.com</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- خط پایانی — شماره ثبت را با مقدار واقعی جایگزین کنید -->
+      <div class="footer__bottom">
+        <span>© ۱۴۰۵ میالویی — تمامی حقوق محفوظ است.</span>
+        <span>شماره ثبت: ۰۰۰۰۰</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       فرم مشاوره (پنجره بازشو) — با کلیک روی دکمه‌های مشاوره باز می‌شود
+       ========================================================== -->
+  <div class="modal" id="consultModal" role="dialog" aria-modal="true" aria-labelledby="consultTitle">
+    <div class="modal__overlay" data-close-modal></div>
+
+    <div class="modal__dialog">
+      <button class="modal__close" type="button" data-close-modal aria-label="بستن فرم">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+
+      <h3 class="modal__title" id="consultTitle">درخواست مشاوره رایگان</h3>
+      <p class="modal__subtitle">فرم زیر را تکمیل کنید؛ کارشناسان ما با شما تماس می‌گیرند.</p>
+
+      <!-- فرم درخواست مشاوره -->
+      <form class="form" id="consultForm" novalidate>
+        <div class="field">
+          <label for="fullName">نام و نام خانوادگی</label>
+          <input type="text" id="fullName" name="fullName" placeholder="مثلاً: علی محمدی" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">شماره تماس</label>
+          <input type="tel" id="phone" name="phone" placeholder="مثلاً: ۰۹۱۲۳۴۵۶۷۸۹" required>
+        </div>
+
+        <div class="field">
+          <label for="car">خودروی مورد نظر</label>
+          <input type="text" id="car" name="car" placeholder="مثلاً: تویوتا لندکروزر" required>
+        </div>
+
+        <div class="field">
+          <label for="budget">بودجه تقریبی</label>
+          <input type="text" id="budget" name="budget" placeholder="مثلاً: ۵ میلیارد تومان">
+        </div>
+
+        <div class="field">
+          <label for="notes">توضیحات</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="هر توضیح بیشتری که لازم می‌دانید..."></textarea>
+        </div>
+
+        <button class="btn btn--silver btn--block" type="submit">ارسال درخواست</button>
+      </form>
+
+      <!-- پیام موفقیت پس از ارسال فرم -->
+      <div class="form-success" id="formSuccess" hidden>
+        <span class="form-success__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <h4>درخواست شما ثبت شد</h4>
+        <p>با تشکر از اعتماد شما. کارشناسان میالویی در اولین فرصت با شما تماس می‌گیرند.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
